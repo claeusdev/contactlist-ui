@@ -15,7 +15,6 @@ function Home() {
       const response = await fetch("http://localhost:3000/api/v1/contacts");
       const contacts = await response.json();
       setContacts(contacts.data);
-      console.log({data: contacts.data})
       setIsLoading(false);
     }
     fetchContacts();
