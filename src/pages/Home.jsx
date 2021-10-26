@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Spinner, Alert } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import Api from "../api";
 import Contacts from "../components/Contacts";
 
@@ -40,7 +41,9 @@ function Home() {
     <div className="App">
       <Container>
         <h1>Contacts List</h1>
-
+        <Link to={`/contact/new`}>
+          Add Contact
+        </Link>
         {flash && <Alert variant={flash.type}>{flash.message}</Alert>}
 
         {isLoading ? (
